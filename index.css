@@ -1,0 +1,87 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Layout */
+#sidebar {
+  width: 80px;
+  height: 100vh;
+  float: left;
+}
+.menu {}
+.menu .item {}
+.menu .item .link {
+  position: relative;
+  display: block;
+  text-align: center;
+  font-size: 22px;
+  color: #dbdbdb;
+  height: 55px;
+  line-height: 55px;
+  margin: 10px 0 10px 0;
+}
+.menu .item .link:first-child { margin: 10px 0 10px 0;}
+.menu .item .link.on {
+  color: rgb(82, 85, 255);
+}
+.menu .item .link.on:after {
+  content:'';
+  display: inline-block;
+  width: 3px;
+  height: 100%;
+  background-color: rgb(82, 85, 255);;
+  position: absolute;
+  left: 0;
+  border-radius: 0 5px 5px 0;
+  /* right: 0;
+  border-radius: 5px 0 0 5px; */
+}
+
+#contents {
+  height: 100vh;
+  padding-left: 70px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+.header {
+  overflow: hidden;
+}
+.header .tab-menu {
+  padding-left: 20px;
+  float: left;
+  overflow: hidden;
+}
+.header .tab-menu .item {
+  float: left;
+}
+.header .tab-menu .item .link {
+  display: block;
+  font-size: 20px;
+  padding: 20px 30px;
+  font-weight: 600;
+  color: #bebebe;
+  position: relative;
+}
+.header .tab-menu .item .link.on {
+  color: #555;
+}
+.header .tab-menu .item .link.on:before {
+  content:'';
+  display: block;
+  height: 2px;
+  width: 50%;
+  background-color: rgb(82, 85, 255);;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 0 0 3px 3px;
+}
+.message {
+  float: right;
+}
+.message a
+.profile {
+  float: right;
+}
