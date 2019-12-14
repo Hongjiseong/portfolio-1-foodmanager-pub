@@ -7,6 +7,7 @@ body {
   width: 80px;
   height: 100vh;
   float: left;
+  box-shadow: 0px 0px 3px 0px #bebebe;
 }
 .menu {}
 .menu .item {}
@@ -15,7 +16,7 @@ body {
   display: block;
   text-align: center;
   font-size: 22px;
-  color: #dbdbdb;
+  color: #bebebe;
   height: 55px;
   line-height: 55px;
   margin: 10px 0 10px 0;
@@ -46,6 +47,8 @@ body {
 }
 .header {
   overflow: hidden;
+  /* box-shadow: 0px 0px 3px 0px #bebebe; */
+  border-bottom: 1px solid #bebebeaa;
 }
 .header .tab-menu {
   padding-left: 20px;
@@ -80,8 +83,41 @@ body {
 }
 .message {
   float: right;
+  height: 100%;
 }
-.message a
+.message .link {
+  font-size: 22px;
+  color: #bebebe;
+  display: block;
+  margin: 18px 60px 18px 0;
+  border-left: 1px solid #dbdbdb;
+  border-right: 1px solid #dbdbdb;
+  padding: 0 30px;
+}
 .profile {
   float: right;
+  overflow: hidden;
+  margin-top: 10px;
+}
+.profile>div {
+  float: left;
+}
+.profile .image {
+  margin-right: 20px;
+}
+.profile .image img {
+  margin-top: 3px;
+  display: inline-block;
+  height: 45px;
+}
+.profile .summary {
+  padding-right: 50px;
+}
+
+.profile .summary .name {
+  font-size: 18px;
+  font-weight: 500;
+}
+.profile .summary .email {
+  font-size: 15px;
 }
