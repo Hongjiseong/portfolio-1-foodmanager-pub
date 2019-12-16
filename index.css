@@ -36,46 +36,113 @@ body {font-family: 'Roboto', 'CookieRun Regular', sans-serif; overflow: hidden;}
 .profile .summary .name {font-size: 18px;font-weight: 500;}
 .profile .summary .email {font-size: 15px;color: #bebebe;}
 
-/* 식재료 목록 */
+/* 콘텐츠 */
 .content {position: relative;overflow: auto;height: 93%;overflow: hidden;}
 .content .container {width: 100%;padding: 25px 40px;box-sizing: border-box;overflow: hidden;}
-.content .container .search-list {width: 70%;height: 100%;float: left;box-sizing: border-box;padding-right: 20px;}
-.content .container .search-list i.good {color: rgb(73, 197, 73);}
-.content .container .search-list i.warnning {color: rgb(243, 207, 0);}
-.content .container .search-list i.bad {color: rgb(255, 89, 89);}
 
-.content .container .search-list .menu {position: relative;overflow: hidden;}
-.content .container .search-list .menu .sub-title {float: left;font-size: 35px;margin-right: 200px;}
-.content .container .search-list .menu .status {float: left;font-size: 22px;font-family: 'CookieRun Regular', sans-serif;padding: 7px 20px;margin-top: 5px;}
-.content .container .search-list .menu .status a {display: inline-block;margin-right: 10px;}
-.content .container .search-list .menu .search-bar {float: right;margin-top: 8px;}
-.content .container .search-list .menu .search-bar input {font-size: 20px;padding: 5px 10px;border: 2px solid #dbdbdb;border-radius: 3px;outline: none;font-family: 'CookieRun Regular', sans-serif;color: #333;}
-.content .container .search-list .menu .search-bar input:focus {transition: all .2s;box-shadow: 0 0 5px rgb(159, 160, 255);border: 2px solid rgb(159, 160, 255);}
-.content .container .search-list .menu .search-bar button {font-family: 'Jua', sans-serif;font-size: 20px;background-color: rgb(82, 85, 255);color: #fff;padding: 8px 20px 6px 20px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+/* 식재료 목록 */
+.search-list {width: 70%;height: 100%;float: left;box-sizing: border-box;padding-right: 20px;}
+.search-list i.good {color: rgb(73, 197, 73);}
+.search-list i.warnning {color: rgb(243, 207, 0);}
+.search-list i.bad {color: rgb(255, 89, 89);}
 
-.content .container .search-list .search-table {margin-top: 20px; border-radius:8px; border: 1px solid #dbdbdb; overflow: hidden;}
-.content .container .search-list .search-table table {border-collapse: collapse; width: 100%;font-size: 25px;font-family: 'CookieRun Regular', sans-serif;color: #444;}
-.content .container .search-list .search-table .table-header table {border-radius: 8px 8px 0 0;}
-.content .container .search-list .search-table .table-header table th {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif; position: relative; border-bottom: 1px solid #dbdbdb;}
-.content .container .search-list .search-table .table-header table th .checkbox-wrap {height: 26px;}
-.content .container .search-list .search-table .table-content {height: 650px;overflow: auto; border-bottom: 1px solid #dbdbdb; border-radius: 0 0 8px 8px;}
-.content .container .search-list .search-table .table-content table {margin-top: -1px;border-radius: 0 0 8px 8px;}
-.content .container .search-list .search-table .table-content table tr {cursor: pointer;}
-.content .container .search-list .search-table .table-content table tr:hover {background-color: #dbdbdb;}
-.content .container .search-list .search-table .table-content table td {padding: 10px 0;border-bottom: 1px solid #dbdbdb;text-align: center;}
-.content .container .search-list .search-table .table-content table td .checkbox-wrap {height: 26px;}
-.content .container .search-list .search-table .table-content table tr:last-child td {border: none;}
-.content .container .search-list .search-table .table-content table td:first-child {margin-top: 2px;}
+.search-list .menu {position: relative;overflow: hidden;}
+.search-list .menu .sub-title {float: left;font-size: 35px;margin-right: 200px;}
+.search-list .menu .status {float: left;font-size: 22px;font-family: 'CookieRun Regular', sans-serif;padding: 7px 20px;margin-top: 5px;}
+.search-list .menu .status a {display: inline-block;margin-right: 10px;}
+.search-list .menu .search-bar {float: right;margin-top: 8px;}
+.search-list .menu .search-bar input {font-size: 20px;padding: 5px 10px;border: 2px solid #dbdbdb;border-radius: 3px;outline: none;font-family: 'CookieRun Regular', sans-serif;color: #333;}
+.search-list .menu .search-bar input:focus {transition: all .2s;box-shadow: 0 0 5px rgb(159, 160, 255);border: 2px solid rgb(159, 160, 255);}
+.search-list .menu .search-bar button {font-family: 'Jua', sans-serif;font-size: 20px;background-color: rgb(82, 85, 255);color: #fff;padding: 8px 20px 6px 20px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+
+.search-list .search-table {margin-top: 20px; border-radius:8px; border: 1px solid #dbdbdb; overflow: hidden;}
+.search-list .search-table table {border-collapse: collapse; width: 100%;font-size: 25px;font-family: 'CookieRun Regular', sans-serif;color: #444;}
+.search-list .search-table .table-header table {border-radius: 8px 8px 0 0;}
+.search-list .search-table .table-header table th {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif; position: relative; border-bottom: 1px solid #dbdbdb;}
+.search-list .search-table .table-header table th .checkbox-wrap {height: 26px;}
+.search-list .search-table .table-content {height: 650px;overflow: auto; border-bottom: 1px solid #dbdbdb; border-radius: 0 0 8px 8px;}
+.search-list .search-table .table-content table {margin-top: -1px;border-radius: 0 0 8px 8px;}
+.search-list .search-table .table-content table tr {cursor: pointer;}
+.search-list .search-table .table-content table tr:hover {background-color: #dbdbdb;}
+.search-list .search-table .table-content table td {padding: 10px 0;border-bottom: 1px solid #dbdbdb;text-align: center;}
+.search-list .search-table .table-content table td .checkbox-wrap {height: 26px;}
+.search-list .search-table .table-content table tr:last-child td {border: none;}
+.search-list .search-table .table-content table td:first-child {margin-top: 2px;}
 
 /* 식재료 상세 */
-.content .container .search-detail {width: 28%;height: 100%;margin-left: 2%;float: left;box-sizing: border-box;}
-.content .container .search-detail .sub-title {font-size: 35px;}
-.content .container .search-detail .card {border: 1px solid #dbdbdb;border-radius: 8px;padding: 20px 30px;margin-top: 20px; cursor: pointer; position: relative;}
-.content .container .search-detail .card:hover {transform: scale(1.02); transition: all .3s;}
-.content .container .search-detail .card .hover-filter {color: #fff; font-size: 70px; display: block; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; position: absolute; border-radius: 8px; text-align: center;}
-.content .container .search-detail .card:hover .hover-filter {background-color: rgba(0, 0, 0, 0.712); opacity: 1; z-index: 10;}
-.content .container .search-detail .card .hover-filter .container {position: absolute; top: 50%; transform: translateY(-50%);}
-.content .container .search-detail .image {text-align: center;position: relative;box-sizing: border-box;}
-.content .container .search-detail .image img {display: inline-block;border-radius: 10px;width: 90%;}
-.content .container .search-detail .info  {font-size: 30px;}
-.content .container .search-detail .info>div {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif;text-align: center;}
+.search-detail {width: 28%;height: 100%;margin-left: 2%;float: left;box-sizing: border-box;}
+.search-detail .sub-title {font-size: 35px;}
+.search-detail .card {border: 1px solid #dbdbdb;border-radius: 8px;padding: 20px 30px;margin-top: 20px; cursor: pointer; position: relative;}
+.search-detail .card:hover {transform: scale(1.02); transition: all .3s;}
+.search-detail .card .hover-filter {color: #fff; font-size: 70px; display: block; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; position: absolute; border-radius: 8px; text-align: center;}
+.search-detail .card:hover .hover-filter {background-color: rgba(0, 0, 0, 0.712); opacity: 1; z-index: 10;}
+.search-detail .card .hover-filter .container {position: absolute; top: 50%; transform: translateY(-50%);}
+.search-detail .image {text-align: center;position: relative;box-sizing: border-box;}
+.search-detail .image img {display: inline-block;border-radius: 10px;width: 90%;}
+.search-detail .info  {font-size: 30px;}
+.search-detail .info>div {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif;text-align: center;}
+
+/* 음식 슬라이더 - 카드레이아웃 */
+.food-slider {
+  width: 70%;
+  height: 720px;
+}
+.food-slider .food-slider-list {
+  overflow: hidden;
+  padding: 30px 0;
+  width: 100%;
+  height: 554px;
+  position: relative;
+}
+.food-slider .food-slider-list .item {
+  cursor: pointer;
+  top: 5%;
+  width: 30%;
+  height: 75%;
+  float: left;
+  position: absolute;
+}
+
+.food-slider .food-slider-list .item:nth-child(1) {left:-200px}
+.food-slider .food-slider-list .item:nth-child(2) {left: 200px;}
+.food-slider .food-slider-list .item:nth-child(3) {left: 600px;}
+.food-slider .food-slider-list .item:nth-child(4) {left: 1000px;}
+.food-slider .food-slider-list .item:nth-child(5) {left: 1400px;}
+
+.food-slider .food-slider-list .item:hover {
+  transform: scale(1.05);
+  transition: all .2s;
+}
+.food-slider .food-slider-list .item .picture {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.food-slider .food-slider-list .item .picture img {
+  width: 100%;
+}
+.food-slider .food-slider-list .item .title{
+  position: absolute;
+  top: 0px;
+  text-align: right;
+  font-size: 40px;
+  background-color: #ffffff55;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+.food-slider .food-slider-page {
+  height: 50px;
+  text-align: center;
+}
+.food-slider .food-slider-page .page-node {
+  width: 30px;
+  height: 30px;
+  background-color: rgb(207, 207, 207);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.food-slider .food-slider-page .page-node:last-child {
+  margin-right: 0px;
+}
