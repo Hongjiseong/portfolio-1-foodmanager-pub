@@ -1,123 +1,81 @@
-body {
-  font-family: 'Roboto', sans-serif;
-}
+@charset "utf-8";
+
+/* 스크롤바 */
+::-webkit-scrollbar {display:none;}
 
 /* Layout */
-#sidebar {
-  width: 80px;
-  height: 100vh;
-  float: left;
-  box-shadow: 0px 0px 3px 0px #bebebe;
-}
-.menu {}
-.menu .item {}
-.menu .item .link {
-  position: relative;
-  display: block;
-  text-align: center;
-  font-size: 22px;
-  color: #bebebe;
-  height: 55px;
-  line-height: 55px;
-  margin: 10px 0 10px 0;
-}
+body {font-family: 'Roboto', 'CookieRun Regular', sans-serif; overflow: hidden;}
+#sidebar {width: 80px;height: 100vh;position: fixed;left: 0;box-shadow: 0px 0px 3px 0px #bebebe;}
+#contents {height: 100vh;padding-left: 80px;box-sizing: border-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;}
+
+/* 사이드 메뉴 */
+.menu .item .link {position: relative;display: block;text-align: center;font-size: 22px;color: #bebebe;height: 55px;line-height: 55px;margin: 10px 0 10px 0;}
 .menu .item .link:first-child { margin: 10px 0 10px 0;}
-.menu .item .link.on {
-  color: rgb(82, 85, 255);
-}
-.menu .item .link.on:after {
-  content:'';
-  display: inline-block;
-  width: 3px;
-  height: 100%;
-  background-color: rgb(82, 85, 255);;
-  position: absolute;
-  left: 0;
-  border-radius: 0 5px 5px 0;
-  /* right: 0;
-  border-radius: 5px 0 0 5px; */
-}
+.menu .item .link.on {color: rgb(82, 85, 255);}
+.menu .item .link.on:after {display: inline-block;content:'';width: 3px;height: 100%;background-color: rgb(82, 85, 255);position: absolute;left: 0;border-radius: 0 5px 5px 0;}
 
-#contents {
-  height: 100vh;
-  padding-left: 70px;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-.header {
-  overflow: hidden;
-  /* box-shadow: 0px 0px 3px 0px #bebebe; */
-  border-bottom: 1px solid #bebebeaa;
-}
-.header .tab-menu {
-  padding-left: 20px;
-  float: left;
-  overflow: hidden;
-}
-.header .tab-menu .item {
-  float: left;
-}
-.header .tab-menu .item .link {
-  display: block;
-  font-size: 20px;
-  padding: 20px 30px;
-  font-weight: 600;
-  color: #bebebe;
-  position: relative;
-}
-.header .tab-menu .item .link.on {
-  color: #555;
-}
-.header .tab-menu .item .link.on:before {
-  content:'';
-  display: block;
-  height: 2px;
-  width: 50%;
-  background-color: rgb(82, 85, 255);;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 0 0 3px 3px;
-}
-.message {
-  float: right;
-  height: 100%;
-}
-.message .link {
-  font-size: 22px;
-  color: #bebebe;
-  display: block;
-  margin: 18px 60px 18px 0;
-  border-left: 1px solid #dbdbdb;
-  border-right: 1px solid #dbdbdb;
-  padding: 0 30px;
-}
-.profile {
-  float: right;
-  overflow: hidden;
-  margin-top: 10px;
-}
-.profile>div {
-  float: left;
-}
-.profile .image {
-  margin-right: 20px;
-}
-.profile .image img {
-  margin-top: 3px;
-  display: inline-block;
-  height: 45px;
-}
-.profile .summary {
-  padding-right: 50px;
-}
+/* 헤더 메뉴 */
+.header {overflow: hidden;border-bottom: 1px solid #bebebeaa;}
+.header .tab-menu {padding-left: 20px;float: left;overflow: hidden;}
+.header .tab-menu .item {float: left;}
+.header .tab-menu .item .link {display: block;font-size: 20px;padding: 20px 30px;font-weight: 600;color: #bebebe;position: relative;}
+.header .tab-menu .item .link.on {color: #555;}
+.header .tab-menu .item .link.on:before {content:'';display: block;height: 2px;width: 50%;background-color: rgb(82, 85, 255);position: absolute;top: 0;left: 50%;transform: translateX(-50%);border-radius: 0 0 3px 3px;}
 
-.profile .summary .name {
-  font-size: 18px;
-  font-weight: 500;
-}
-.profile .summary .email {
-  font-size: 15px;
-}
+/* 헤더 알림메시지 */
+.message {float: right;height: 100%;}
+.message .link {position: relative; font-size: 22px;color: #bebebe;display: block;margin: 18px 60px 18px 0;border-left: 1px solid #dbdbdb;border-right: 1px solid #dbdbdb;padding: 0 30px;}
+.message .link.on:after {content: '';display: inline-block;width: 10px;height: 10px;border-radius: 50%;background-color: #ff2a2a;position: absolute;top: 0px;left: 46px;}
+
+/* 헤더 프로필 */
+.profile {float: right;overflow: hidden;margin-top: 10px;}
+.profile>div {float: left;}
+.profile .image {margin-right: 20px;}
+.profile .image img {margin-top: 3px;display: inline-block;height: 45px;}
+.profile .summary {padding-right: 50px;}
+.profile .summary .name {font-size: 18px;font-weight: 500;}
+.profile .summary .email {font-size: 15px;color: #bebebe;}
+
+/* 식재료 목록 */
+.content {position: relative;overflow: auto;height: 93%;overflow: hidden;}
+.content .container {width: 100%;padding: 25px 40px;box-sizing: border-box;overflow: hidden;}
+.content .container .search-list {width: 70%;height: 100%;float: left;box-sizing: border-box;padding-right: 20px;}
+.content .container .search-list i.good {color: rgb(73, 197, 73);}
+.content .container .search-list i.warnning {color: rgb(243, 207, 0);}
+.content .container .search-list i.bad {color: rgb(255, 89, 89);}
+
+.content .container .search-list .menu {position: relative;overflow: hidden;}
+.content .container .search-list .menu .sub-title {float: left;font-size: 35px;margin-right: 200px;}
+.content .container .search-list .menu .status {float: left;font-size: 22px;font-family: 'CookieRun Regular', sans-serif;padding: 7px 20px;margin-top: 5px;}
+.content .container .search-list .menu .status a {display: inline-block;margin-right: 10px;}
+.content .container .search-list .menu .search-bar {float: right;margin-top: 8px;}
+.content .container .search-list .menu .search-bar input {font-size: 20px;padding: 5px 10px;border: 2px solid #dbdbdb;border-radius: 3px;outline: none;font-family: 'CookieRun Regular', sans-serif;color: #333;}
+.content .container .search-list .menu .search-bar input:focus {transition: all .2s;box-shadow: 0 0 5px rgb(159, 160, 255);border: 2px solid rgb(159, 160, 255);}
+.content .container .search-list .menu .search-bar button {font-family: 'Jua', sans-serif;font-size: 20px;background-color: rgb(82, 85, 255);color: #fff;padding: 8px 20px 6px 20px;border-radius: 3px;cursor: pointer;margin-left: 10px;}
+
+.content .container .search-list .search-table {margin-top: 20px;}
+.content .container .search-list .search-table table {border-collapse: collapse; width: 100%;font-size: 25px;font-family: 'CookieRun Regular', sans-serif;color: #444;border: 1px solid #dbdbdb;}
+.content .container .search-list .search-table .table-header table {border-radius: 8px 8px 0 0;}
+.content .container .search-list .search-table .table-header table th {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif; position: relative;}
+.content .container .search-list .search-table .table-header table th .checkbox-wrap {height: 26px;}
+.content .container .search-list .search-table .table-content {height: 650px;overflow: auto; border-bottom: 1px solid #dbdbdb; border-radius: 0 0 8px 8px;}
+.content .container .search-list .search-table .table-content table {margin-top: -1px;border-radius: 0 0 8px 8px;}
+.content .container .search-list .search-table .table-content table tr {cursor: pointer;}
+.content .container .search-list .search-table .table-content table tr:hover {background-color: #dbdbdb;}
+.content .container .search-list .search-table .table-content table td {padding: 10px 0;border-bottom: 1px solid #dbdbdb;text-align: center;}
+.content .container .search-list .search-table .table-content table td .checkbox-wrap {height: 26px;}
+.content .container .search-list .search-table .table-content table tr:last-child td {border: none;}
+.content .container .search-list .search-table .table-content table td:first-child {margin-top: 2px;}
+
+/* 식재료 상세 */
+.content .container .search-detail {width: 28%;height: 100%;margin-left: 2%;float: left;box-sizing: border-box;}
+.content .container .search-detail .sub-title {font-size: 35px;}
+.content .container .search-detail .card {border: 1px solid #dbdbdb;border-radius: 8px;padding: 20px 30px;margin-top: 20px; cursor: pointer; position: relative;}
+.content .container .search-detail .card:hover {transform: scale(1.02); transition: all .3s;}
+.content .container .search-detail .card .hover-filter {color: #fff; font-size: 70px; display: block; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; position: absolute; border-radius: 8px; text-align: center;}
+.content .container .search-detail .card:hover .hover-filter {background-color: rgba(0, 0, 0, 0.712); opacity: 1; z-index: 10;}
+.content .container .search-detail .card .hover-filter .container {position: absolute; top: 50%; transform: translateY(-50%);}
+.content .container .search-detail .image {text-align: center;position: relative;box-sizing: border-box;}
+.content .container .search-detail .image img {display: inline-block;border-radius: 10px;width: 90%;}
+.content .container .search-detail .info  {font-size: 30px;}
+.content .container .search-detail .info>div {padding: 10px 0;font-family: 'CookieRun Regular', sans-serif;text-align: center;}
